@@ -16,13 +16,3 @@ export const request = async (url, option = {}) => {
         console.log("통신 문제", e)
     }
 }
-
-// https://kdt-api.fe.dev-cos.com/documents/ get -> documents
-// https://kdt-api.fe.dev-cos.com/documents/ post -> documents
-// https://kdt-api.fe.dev-cos.com/documents/10412 put
-
-request('/')
-request('/', {method: 'POST'})
-
-// 성우
-request('/12371', {method: 'put'})

@@ -16,8 +16,7 @@ export default function PostIndexPage({ $target }) {
 
     const fetchPosts = async () => {
         const posts = await request("/");
-        console.log(posts)
-        // postList.prepend(posts);
+        postList.prepend(posts);
     }
 
     this.render = async () => {
