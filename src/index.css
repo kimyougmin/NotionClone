@@ -260,6 +260,52 @@ button {
 	display: none;
 }
 
+.modal {
+	display: none;
+	position: fixed;
+	top: 95rem;
+	left: calc(50% + 58em);
+	width: 28rem;
+	padding: 1.5rem 2rem;
+	background-color: var(--color-green--sub);
+	border: 3px solid var(--color-green--main);
+	border-radius: 10px;
+	z-index: 1000;
+
+	animation: slide-in-from-buttom 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.modal.save-modal {
+	background-color: var(--color-green--sub);
+	border: 3px solid var(--color-green--main);
+}
+.modal.delete-modal {
+	background-color: var(--color-red--sub);
+	border: 3px solid var(--color-red--main);
+}
+.modal .circle {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: var(--color-green--main);
+
+	margin-right: 1.5rem;
+}
+.modal.save-modal .circle {
+	background-color: var(--color-green--main);
+}
+.modal.delete-modal .circle {
+	background-color: var(--color-red--main);
+}
+.modal .modal-text {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.modal.modal-active {
+	display: block;
+}
+
 @keyframes slide-in-from-buttom {
 	0% {
 		opacity: 0;

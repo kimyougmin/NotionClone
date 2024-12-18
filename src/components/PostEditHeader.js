@@ -22,6 +22,14 @@ export default function PostEditHeader({ $target, initialState }) {
                     <span>삭제</span>
                 </button>
             </div>
+						<div class="modal save-modal">
+							<span class="circle"></span>
+							<span class="modal-text">저장되었습니다.</span>
+						</div>
+						<div class="modal delete-modal">
+							<span class="circle"></span>
+							<span class="modal-text">삭제되었습니다.</span>
+						</div>
             `;
 	};
 
