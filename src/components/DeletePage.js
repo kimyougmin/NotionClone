@@ -34,11 +34,7 @@ export default function DeletePage({ $target, documentId, onNavigate }) {
         });
     };
 
-<<<<<<< HEAD
     // 페이지 제거 함수 (새 페이지로 이동할 때 기존 페이지 제거)
-=======
-    //
->>>>>>> 2fb2151 (feat: 헤더의 삭제 기능 저장)
     this.destroy = () => {
         $page.remove();
     };
