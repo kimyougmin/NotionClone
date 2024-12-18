@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-export default function PostListUl(state) {
-    return (
-        `<ul>
-            ${state.map((e) => {
-                // const 
-        })}
-        </ul>`
-    )
-};
-=======
 import { PostListMiniUl } from "./PostListMiniUi.js";
 
 export function PostListUl(state) {
@@ -47,4 +36,3 @@ export function PostListUl(state) {
 
     return $listContainer.outerHTML;
 }
->>>>>>> 6614a35 (feat: 헤더의 삭제 기능 추가)

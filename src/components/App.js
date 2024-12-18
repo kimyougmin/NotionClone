@@ -1,6 +1,5 @@
 import PostIndexPage from "./PostIndexPage.js";
 import PostEditPage from "./PostEditPage.js";
-import DeletePage from "./DeletePage.js"; // 삭제 페이지 가져오기
 import { request } from "../api/api.js";
 
 export default function App({ $target }) {
@@ -34,7 +33,7 @@ export default function App({ $target }) {
             // removeDiv(".main-page");
             const [, id] = pathname.split("/");
             postEditPage.setState({
-                documentId: id,
+                documentId: id, ///////////////////
                 parentId: parent,
             });
         }
