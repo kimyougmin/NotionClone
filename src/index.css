@@ -11,8 +11,6 @@
 
 	--color-dark: #333333;
 	--color-light: #f2f2f2;
-
-	--color-gradient: linear-gradient(to top left, #6fb1fc, #0052d4);
 }
 
 * {
@@ -68,9 +66,9 @@ button {
 #left {
 	width: 48rem;
 	height: 105rem;
+	overflow: scroll;
 	background-color: #fff;
 	border-radius: 2rem;
-    overflow: scroll;
 	padding: 5rem 4rem;
 }
 #right {
@@ -124,13 +122,9 @@ button {
 }
 .search-box button {
 	position: absolute;
-	top: 1.2rem;
+	top: 1.5rem;
 	right: 2rem;
 	border-radius: 1.5rem;
-}
-
-.top-document {
-	margin-bottom: 4rem;
 }
 
 .top-document-info {
@@ -144,6 +138,7 @@ button {
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.5rem;
+	width: 300px;
 }
 
 .top-document-left button {
@@ -156,18 +151,23 @@ button {
 }
 
 .top-document-left h2 {
+	width: 23rem;
 	font-size: 2.6rem;
 	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .sub-document {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
+	margin-bottom: 4rem;
 }
-.sub-document-item{
-    margin-bottom: 5px;
-    border-radius: 8px;
+.sub-document-item {
+	margin-bottom: 5px;
+	border-radius: 8px;
 }
 .sub-document-item a {
 	display: flex;
