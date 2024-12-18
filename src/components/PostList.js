@@ -1,6 +1,6 @@
 import { PostListUl } from '../utilly/PostListUl.js';
 
-export default function PostList({ $target, initialState }) {
+export default function PostList({ $target, initialState, route }) {
 	const $postsList = document.createElement('div');
 	$postsList.className = 'left-main';
 	$target.appendChild($postsList);
@@ -47,8 +47,8 @@ export default function PostList({ $target, initialState }) {
 				const temp = clickedItem.className.split(' ');
 				const id = temp[temp.length - 1];
 				console.log(id);
-				history.pushState({ id }, null, id);
-
+				history.pushState({ id , state: this.state}, null, id);
+                route()
 				clickedItem.style.backgroundColor = '#f3f3f3';
 			});
 		});

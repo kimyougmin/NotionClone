@@ -2,7 +2,7 @@ import PostEditHeader from './PostEditHeader.js';
 import PostEditBody from './PostEditBody.js';
 import { request } from '../api/api.js';
 
-export default function PostEditPage({ $target, initialState }) {
+export default function PostEditPage({ $target, initialState, route }) {
 	const $postEditPage = document.createElement('section');
 	$postEditPage.id = 'right';
 
@@ -16,7 +16,11 @@ export default function PostEditPage({ $target, initialState }) {
 		$target: $postEditPage,
 		initialState,
 	});
-
+    try {
+        route()
+    } catch (e) {
+        console.error(e)
+    }
 	this.setState = async ({ documentId, parentId }) => {
 		try {
 			const nextState = await request(`/${documentId}`);
