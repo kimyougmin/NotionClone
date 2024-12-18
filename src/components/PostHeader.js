@@ -8,7 +8,7 @@ export default function PostHeader({ $target }) {
                 <img src="src/public/notepad_logo.png" alt="로고 이미지" />
                 <h1>Notepad</h1>
              </a>
-            <button>
+            <button class="add-new-btn">
                 <img src="src/public/round_plus.png" alt="상위 페이지 추가 버튼" />
             </button>
             `;

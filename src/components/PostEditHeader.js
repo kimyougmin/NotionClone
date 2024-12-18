@@ -11,7 +11,7 @@ export default function PostEditHeader({ $target, initialState }) {
 	};
 
 	this.render = () => {
-		$editHeader.innerHTML = `<h3>${this.state.title}</h3>
+		$editHeader.innerHTML = `<h3>${this.state.title ?? '제목을 입력해주세요.'}</h3>
              <div class="btn-container">
                  <button class="save-btn">
                      <img src="src/public/save.png" alt="저장 이미지" />
