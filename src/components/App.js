@@ -11,7 +11,7 @@ export default function App({ $target }) {
     const postEditPage = new PostEditPage({
         $target,
         initialState: {
-            documentId: 147244, // test
+            documentId: 148049, // <- test 아이디 넣는 곳
             document: {
                 title: "",
                 content: "",

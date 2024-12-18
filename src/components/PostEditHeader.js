@@ -1,4 +1,4 @@
-import { request } from "../api/api.js"; // 요청 보내는 함수 가져오기
+import { request } from "../api/api.js";
 
 export default function PostEditHeader({ $target, documentId, onNavigate }) {
     const $editHeader = document.createElement("div");
@@ -24,12 +24,18 @@ export default function PostEditHeader({ $target, documentId, onNavigate }) {
                 console.log("삭제할 ID 확인 :", documentId); // 삭제할 ID 확인
                 try {
                     // DELETE 요청 보내기
-                    await request(`/${documentId}`, { method: "DELETE" });
+                    console.log("삭제하려는 Id :", documentId); // 삭제하려는 documentId 확인
+
+                    // 수정된 부분: URL에 documentId를 추가하여 요청
+                    await request(`/${documentId}`, {
+                        method: "DELETE",
+                    });
 
                     alert("문서가 삭제되었습니다.");
                     onNavigate("/"); // 메인 페이지로 이동
                 } catch (error) {
                     alert("문서 삭제 실패: " + error.message);
+                    console.log(error);
                 }
             });
     };

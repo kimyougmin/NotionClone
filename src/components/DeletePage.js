@@ -18,14 +18,9 @@ export default function DeletePage({ $target, documentId, onNavigate }) {
         $page
             .querySelector("#confirm-delete")
             .addEventListener("click", async () => {
-                try {
-                    // DELETE 요청을 보내 문서 삭제
-                    await request(`/${documentId}`, { method: "DELETE" });
-                    alert("문서가 삭제되었습니다.");
-                    onNavigate("/"); // 메인 페이지로 이동
-                } catch (error) {
-                    alert("문서 삭제 실패: " + error.message);
-                }
+                await request(`/${documentId}`, { method: "DELETE" });
+                alert("페이지가 삭제되었습니다.");
+                onNavigate("/"); // 메인 페이지로 이동
             });
 
         // 취소 버튼 클릭 시
