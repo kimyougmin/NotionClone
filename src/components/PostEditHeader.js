@@ -1,10 +1,17 @@
-export default function PostEditHeader({ $target }) {
-    const $editHeader = document.createElement("div");
-    $editHeader.className = "document-info-container";
-    $target.appendChild($editHeader);
-    this.render = () => {
-        $editHeader.innerHTML =
-            `<h3>상위 페이지 > 새로운 글의 제목</h3>
+export default function PostEditHeader({ $target, initialState }) {
+	const $editHeader = document.createElement('div');
+	$editHeader.className = 'document-info-container';
+	$target.appendChild($editHeader);
+
+	this.state = initialState;
+
+	this.setState = (nextState) => {
+		this.state = nextState;
+		this.render();
+	};
+
+	this.render = () => {
+		$editHeader.innerHTML = `<h3>${this.state.title}</h3>
              <div class="btn-container">
                  <button class="save-btn">
                      <img src="src/public/save.png" alt="저장 이미지" />
@@ -15,10 +22,8 @@ export default function PostEditHeader({ $target }) {
                     <span>삭제</span>
                 </button>
             </div>
-            `
-        ;
-    }
+            `;
+	};
 
-    this.render();
-
-};
+	this.render();
+}

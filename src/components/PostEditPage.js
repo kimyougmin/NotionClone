@@ -1,19 +1,37 @@
-import PostEditHeader from "./PostEditHeader.js";
-import PostEditBody from "./PostEditBody.js";
+import PostEditHeader from './PostEditHeader.js';
+import PostEditBody from './PostEditBody.js';
+import { request } from '../api/api.js';
 
-export default function PostEditPage({ $target }) {
-    const $postEditPage = document.createElement("section");
-    $postEditPage.id = "right";
+export default function PostEditPage({ $target, initialState }) {
+	const $postEditPage = document.createElement('section');
+	$postEditPage.id = 'right';
 
-    new PostEditHeader({
-        $target: $postEditPage
-    });
-    new PostEditBody({
-        $target: $postEditPage
-    });
+	this.state = initialState;
 
-    this.render = () => {
-        $target.prepend($postEditPage);
-    };
-    this.render();
+	const editHeader = new PostEditHeader({
+		$target: $postEditPage,
+		initialState,
+	});
+	const editBody = new PostEditBody({
+		$target: $postEditPage,
+		initialState,
+	});
+
+	this.setState = async ({ documentId, parentId }) => {
+		try {
+			const nextState = await request(`/${documentId}`);
+			const parentState = await request(`/${parentId}`);
+			this.state = { documentId, parentId }; // 상태 업데이트
+			editHeader.setState(parentState);
+			editBody.setState(nextState);
+		} catch (error) {
+			console.error('데이터 요청 중 오류 발생:', error);
+		}
+	};
+
+	this.render = () => {
+		$target.prepend($postEditPage);
+	};
+
+	this.render();
 }
