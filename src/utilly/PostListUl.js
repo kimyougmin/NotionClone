@@ -7,7 +7,7 @@ export function PostListUl(state) {
 		.map((e) => {
 			const listToggleName = `isOpened-${e.id}`;
 			return `
-                <div class="top-document-info">
+                <div class="top-document-info ${e.id}">
                     <div class="top-document-left ${listToggleName}">
                         <button>
                             <img src="src/public/down_arrow.png" alt="아래 화살표" />

@@ -29,6 +29,13 @@ export default function PostList({ $target, initialState, route }) {
 		this.addEvents();
 	};
 
+	this.setUrl = (element) => {
+		const temp = element.className.split(' ');
+		const id = temp[temp.length - 1];
+		history.pushState({ id, state: this.state }, null, id);
+		route();
+	};
+
 	this.addEvents = () => {
 		// 모든 li 요소에 이벤트 리스너 추가
 		const listItems = $postsList.querySelectorAll('.sub-document-item');
@@ -44,10 +51,8 @@ export default function PostList({ $target, initialState, route }) {
 				const clickedItem = event.currentTarget;
 
 				// url에 아이디 추가
-				const temp = clickedItem.className.split(' ');
-				const id = temp[temp.length - 1];
-				history.pushState({ id, state: this.state }, null, id);
-				route();
+				this.setUrl(clickedItem);
+
 				clickedItem.style.backgroundColor = '#f3f3f3';
 			});
 		});
@@ -62,6 +67,9 @@ export default function PostList({ $target, initialState, route }) {
 				// 상위 페이지 화살표 클릭 시 회전 애니메이션 추가
 				const arrowElement = event.target.closest('.top-document-left');
 				arrowElement.classList.toggle('active');
+
+				// 상위 페이지 클릭 시 상위 페이지 정보로 edit 페이지 변경
+				this.setUrl(parentElement);
 
 				if (subDocument && subDocument.classList.contains('sub-document')) {
 					const isHidden = subDocument.style.display === 'none';
