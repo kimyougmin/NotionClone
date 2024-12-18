@@ -6,14 +6,16 @@ export default function PostList({ $target, initialState, route }) {
 	$target.appendChild($postsList);
 
 	this.state = initialState;
+	this.initialState = initialState;
+	this.keyword = '';
+
+	this.setKeywordState = (newKeyword) => {
+		this.keyword = newKeyword;
+	};
 
 	this.setState = (nState) => {
 		this.state = nState;
 		this.render();
-	};
-
-	this.setKeywordState = (newKeyword) => {
-		this.keyword = newKeyword;
 	};
 
 	this.prepend = (items) => {
