@@ -59,6 +59,10 @@ export default function PostList({ $target, initialState, route }) {
 				const parentElement = event.target.closest('.top-document-info');
 				const subDocument = parentElement.nextElementSibling;
 
+				// 상위 페이지 화살표 클릭 시 회전 애니메이션 추가
+				const arrowElement = event.target.closest('.top-document-left');
+				arrowElement.classList.toggle('active');
+
 				if (subDocument && subDocument.classList.contains('sub-document')) {
 					const isHidden = subDocument.style.display === 'none';
 					subDocument.style.display = isHidden ? 'block' : 'none';
