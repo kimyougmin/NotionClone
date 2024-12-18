@@ -53,7 +53,7 @@ export default function PostEditPage({ $target, initialState, route }) {
 				}
 
 				const editedData = { title, content };
-				console.log(editedData);
+
 
 				try {
 					await request(`/${this.state.documentId}`, {
