@@ -1,11 +1,19 @@
-export default function PostEditPage(props) {
-    const $postsPage = document.createElement("div");
-    $postsPage.className = "post_Index_Page";
+import PostEditHeader from "./PostEditHeader.js";
+import PostEditBody from "./PostEditBody.js";
 
-    $postsPage.innerHTML += `
-        <div>
-            <input >
-            <input >
-        </div>
-    `;
+export default function PostEditPage({ $target }) {
+    const $postEditPage = document.createElement("section");
+    $postEditPage.id = "right";
+
+    new PostEditHeader({
+        $target: $postEditPage
+    });
+    new PostEditBody({
+        $target: $postEditPage
+    });
+
+    this.render = () => {
+        $target.prepend($postEditPage);
+    };
+    this.render();
 }

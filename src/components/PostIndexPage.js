@@ -3,12 +3,13 @@ import { request } from "../api/api.js";
 import PostHeader from "./PostHeader.js";
 
 export default function PostIndexPage({ $target }) {
-    const $postsPage = document.createElement("div");
-    $postsPage.className = "post_Index_Page";
+    const $postsPage = document.createElement("section");
+    $postsPage.id = "left";
 
     new PostHeader({
         $target: $postsPage
     })
+
     const postList = new PostList({
         $target: $postsPage,
         initialState: []
