@@ -1,4 +1,4 @@
-import { PostListUl } from '../utilly/PostListUl.js';
+import { PostListUl } from "../utilly/PostListUl.js";
 
 export default function PostList({ $target, initialState, route }) {
 	const $postsList = document.createElement('div');
@@ -13,7 +13,6 @@ export default function PostList({ $target, initialState, route }) {
 		this.keyword = newKeyword;
 	};
 
-	// 본체
 	this.prepend = (items) => {
 		this.initialState = [...items, ...this.initialState];
 		this.setState([...items, ...this.state]);
@@ -24,14 +23,14 @@ export default function PostList({ $target, initialState, route }) {
 		this.render();
 	};
 
-	this.render = () => {
-		$postsList.innerHTML = `
-            <div class="search-box">
+  this.render = () => {
+    $postsList.innerHTML = `
+            <form class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
-                <button id="button">
+                <button id="button" type="submit">
                     <img src="src/public/search.png" alt="돋보기 아이콘" />
                 </button>
-            </div>
+            </form>
             ${PostListUl(this.state)}
         `;
 		this.addEvents();
@@ -149,6 +148,5 @@ export default function PostList({ $target, initialState, route }) {
 			});
 		});
 	};
-
-	this.render();
+  this.render();
 }
