@@ -1,13 +1,13 @@
-import { PostListMiniUl } from './PostListMiniUi.js';
+import { PostListMiniUl } from "./PostListMiniUi.js";
 
 export function PostListUl(state) {
-	const $listContainer = document.createElement('ul');
-	$listContainer.className = 'top-document';
+  const $listContainer = document.createElement("ul");
+  $listContainer.className = "top-document";
 
-	$listContainer.innerHTML = state
-		.map((e) => {
-			const listToggleName = `isOpened-${e.id}`;
-			return `
+  $listContainer.innerHTML = state
+    .map((e) => {
+      const listToggleName = `isOpened-${e.id}`;
+      return `
                 <div class="top-document-info ${e.id}">
                     <div class="top-document-left ${listToggleName}">
                         <button>
@@ -25,15 +25,15 @@ export function PostListUl(state) {
                     </div>
                 </div>
                 ${
-									e.documents.length > 0
-										? `<ul class="sub-document" style="display: none">${PostListMiniUl(
-												e.documents
-										  )}</ul>`
-										: ''
-								}
+                  e.documents.length > 0
+                    ? `<ul class="sub-document">${PostListMiniUl(
+                        e.documents
+                      )}</ul>`
+                    : ""
+                }
             `;
-		})
-		.join('');
+    })
+    .join("");
 
-	return $listContainer.outerHTML;
+  return $listContainer.outerHTML;
 }
