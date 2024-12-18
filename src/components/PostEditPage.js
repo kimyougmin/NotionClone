@@ -17,7 +17,6 @@ export default function PostEditPage({ $target, initialState, route }) {
 		initialState,
 	});
 
-	// route();
 	this.setState = async ({ documentId, parentId }) => {
 		try {
 			this.state = { documentId, parentId }; // 상태 업데이트
