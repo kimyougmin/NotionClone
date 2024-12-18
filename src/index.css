@@ -167,15 +167,34 @@ button {
 }
 
 .sub-document {
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
-	margin-bottom: 4rem;
+	margin-bottom: 4rem; */
+	
+	display: block;
+	overflow: hidden;
+	transition: max-height 0.5s ease;
+  max-height: 0px;
+}
+
+.sub-document.open {
+	/* display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-bottom: 4rem; */
+	
+	/* display: block;
+	overflow: hidden; */
+	transition: max-height 0.5s ease;
+  max-height: 300px;
 }
 .sub-document-item {
 	margin-bottom: 5px;
 	border-radius: 8px;
 }
+
+
 .sub-document-item a {
 	display: flex;
 	align-items: center;
@@ -183,6 +202,11 @@ button {
 	border-radius: 8px;
 	gap: 2rem;
 }
+
+.sub-document-item a:first-child {
+	padding-top: 0;
+}
+
 .sub-document-item a h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
