@@ -1,4 +1,5 @@
-import { PostListUl } from "../utilly/PostListUl.js";
+import { request } from '../api/api.js';
+import { PostListUl } from '../utilly/PostListUl.js';
 
 export default function PostList({ $target, initialState, route }) {
 	const $postsList = document.createElement('div');
@@ -23,8 +24,8 @@ export default function PostList({ $target, initialState, route }) {
 		this.render();
 	};
 
-  this.render = () => {
-    $postsList.innerHTML = `
+	this.render = () => {
+		$postsList.innerHTML = `
             <form class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
                 <button id="button" type="submit">
@@ -147,6 +148,25 @@ export default function PostList({ $target, initialState, route }) {
 				}
 			});
 		});
+
+		$postsList.addEventListener('click', async (event) => {
+			const deleteBtn = event.target.closest('.top-document-delete-btn');
+			const parentElement = event.target.closest('.top-document-info');
+			const temp = parentElement.className.split(' ');
+			const id = temp[temp.length - 1];
+
+			if (deleteBtn) {
+				try {
+					const response = await request(`/${id}`, {
+						method: 'DELETE',
+					});
+					console.log(response);
+					alert('문서가 삭제되었습니다.');
+				} catch (error) {
+					console.error('문서를 삭제하는데 실패하였습니다.');
+				}
+			}
+		});
 	};
-  this.render();
+	this.render();
 }
