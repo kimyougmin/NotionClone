@@ -19,7 +19,7 @@ export function PostListUl(state) {
                         <button>
                             <img src="src/public/plus.png" alt="하위 페이지 추가 버튼" />
                         </button>
-                        <button>
+                        <button class="top-document-delete-btn">
                             <img src="src/public/trash.png" alt="상위 페이지 삭제 버튼" />
                         </button>
                     </div>

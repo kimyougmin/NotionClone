@@ -53,7 +53,7 @@ export default function PostEditPage({ $target, initialState, route }) {
 				}
 
 				const editedData = { title, content };
-				console.log(editedData);
+
 
 				try {
 					await request(`/${this.state.documentId}`, {
@@ -62,6 +62,20 @@ export default function PostEditPage({ $target, initialState, route }) {
 					});
 				} catch (error) {
 					console.error('내용이 전송되지 않았습니다.');
+				}
+			}
+		});
+
+		$postEditPage.addEventListener('click', async (event) => {
+			const deleteBtn = event.target.closest('.delete-btn');
+			if (deleteBtn) {
+				try {
+					await request(`/${this.state.documentId}`, {
+						method: 'DELETE',
+					});
+					alert('문서가 삭제되었습니다.');
+				} catch (error) {
+					console.error('문서를 삭제하는데 실패하였습니다.');
 				}
 			}
 		});

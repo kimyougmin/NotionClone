@@ -17,7 +17,7 @@ export default function PostEditHeader({ $target, initialState }) {
                      <img src="src/public/save.png" alt="저장 이미지" />
                      <span>저장</span>
                  </button>
-                <button>
+                <button class="delete-btn">
                     <img src="src/public/trash.png" alt="삭제 이미지" />
                     <span>삭제</span>
                 </button>
