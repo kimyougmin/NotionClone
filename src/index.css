@@ -11,8 +11,6 @@
 
 	--color-dark: #333333;
 	--color-light: #f2f2f2;
-
-	--color-gradient: linear-gradient(to top left, #6fb1fc, #0052d4);
 }
 
 * {
@@ -68,9 +66,9 @@ button {
 #left {
 	width: 48rem;
 	height: 105rem;
+	overflow: scroll;
 	background-color: #fff;
 	border-radius: 2rem;
-    overflow: scroll;
 	padding: 5rem 4rem;
 }
 #right {
@@ -129,10 +127,6 @@ button {
 	border-radius: 1.5rem;
 }
 
-.top-document {
-	margin-bottom: 4rem;
-}
-
 .top-document-info {
 	display: flex;
 	justify-content: space-between;
@@ -157,23 +151,23 @@ button {
 }
 
 .top-document-left h2 {
+	width: 23rem;
 	font-size: 2.6rem;
 	font-weight: 700;
-	display: block;
-	width: 270px;
-	text-overflow: ellipsis;
-	overflow: hidden;
 	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .sub-document {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
+	margin-bottom: 4rem;
 }
-.sub-document-item{
-    margin-bottom: 5px;
-    border-radius: 8px;
+.sub-document-item {
+	margin-bottom: 5px;
+	border-radius: 8px;
 }
 .sub-document-item a {
 	display: flex;

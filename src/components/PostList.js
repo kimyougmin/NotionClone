@@ -1,31 +1,29 @@
-import { request } from "../api/api.js";
-import { PostListUl } from "../utilly/PostListUl.js";
+import { PostListUl } from '../utilly/PostListUl.js';
 
-export default function PostList({ $target, initialState }) {
-  const $postsList = document.createElement("div");
-  $postsList.className = "left-main";
-  $target.appendChild($postsList);
+export default function PostList({ $target, initialState, route }) {
+	const $postsList = document.createElement('div');
+	$postsList.className = 'left-main';
+	$target.appendChild($postsList);
 
-  this.state = initialState;
-  this.initialState = initialState;
-  this.keyword = "";
+	this.state = initialState;
 
+	this.setState = (nState) => {
+		this.state = nState;
+		this.render();
+	};
+  
   this.setKeywordState = (newKeyword) => {
     this.keyword = newKeyword;
   };
 
-  this.setState = (nState) => {
-    this.state = nState;
-    this.render();
-  };
-
-  this.prepend = (items) => {
+  
+	this.prepend = (items) => {
     this.initialState = [...items, ...this.initialState];
-    this.setState([...items, ...this.state]);
-  };
+		this.setState([...items, ...this.state]);
+	};
 
-  this.render = () => {
-    $postsList.innerHTML = `
+	this.render = () => {
+		$postsList.innerHTML = `
             <div class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
                 <button id="button">

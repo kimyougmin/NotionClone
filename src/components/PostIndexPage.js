@@ -2,7 +2,7 @@ import PostList from './PostList.js';
 import { request } from "../api/api.js";
 import PostHeader from "./PostHeader.js";
 
-export default function PostIndexPage({ $target }) {
+export default function PostIndexPage({ $target, route }) {
     const $postsPage = document.createElement("section");
     $postsPage.id = "left";
 
@@ -12,7 +12,8 @@ export default function PostIndexPage({ $target }) {
 
     const postList = new PostList({
         $target: $postsPage,
-        initialState: []
+        initialState: [],
+        route
     });
 
     const fetchPosts = async () => {
@@ -27,5 +28,4 @@ export default function PostIndexPage({ $target }) {
     this.route = () => {
         this.setState();
     }
-    // listRoute(() => fetchPosts());
 }
