@@ -70,6 +70,7 @@ button {
 	height: 105rem;
 	background-color: #fff;
 	border-radius: 2rem;
+    overflow: scroll;
 	padding: 5rem 4rem;
 }
 #right {
@@ -164,7 +165,10 @@ button {
 	flex-direction: column;
 	gap: 1.5rem;
 }
-
+.sub-document-item{
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
 .sub-document-item a {
 	display: flex;
 	align-items: center;
@@ -172,10 +176,6 @@ button {
 	border-radius: 8px;
 	gap: 2rem;
 }
-.sub-document-item.active a {
-	background-color: #f2f2f2;
-}
-
 .sub-document-item a h3 {
 	font-size: 1.8rem;
 	font-weight: 500;
