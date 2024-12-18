@@ -29,8 +29,25 @@ export default function PostEditPage({ $target, initialState }) {
 		}
 	};
 
+	this.getDocumentData = () => {
+		const title = $postEditPage.querySelector('.document-title');
+		const content = $postEditPage.querySelector('.document-content');
+
+		console.log('제목:', title?.value);
+		console.log('내용:', content?.value);
+	};
+
 	this.render = () => {
 		$target.prepend($postEditPage);
+
+		// 렌더링 후 버튼 이벤트 리스너 추가
+		const saveButton = $postEditPage.querySelector('.save-btn');
+		if (saveButton) {
+			saveButton.addEventListener('click', () => {
+				console.log('저장 버튼 클릭!');
+				this.getDocumentData();
+			});
+		}
 	};
 
 	this.render();
