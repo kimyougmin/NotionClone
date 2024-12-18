@@ -65,6 +65,20 @@ export default function PostEditPage({ $target, initialState, route }) {
 				}
 			}
 		});
+
+		$postEditPage.addEventListener('click', async (event) => {
+			const deleteBtn = event.target.closest('.delete-btn');
+			if (deleteBtn) {
+				try {
+					await request(`/${this.state.documentId}`, {
+						method: 'DELETE',
+					});
+					alert('문서가 삭제되었습니다.');
+				} catch (error) {
+					console.error('문서를 삭제하는데 실패하였습니다.');
+				}
+			}
+		});
 	};
 
 	this.render();
