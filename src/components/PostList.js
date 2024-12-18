@@ -46,9 +46,8 @@ export default function PostList({ $target, initialState, route }) {
 				// url에 아이디 추가
 				const temp = clickedItem.className.split(' ');
 				const id = temp[temp.length - 1];
-				console.log(id);
-				history.pushState({ id , state: this.state}, null, id);
-                route()
+				history.pushState({ id, state: this.state }, null, id);
+				route();
 				clickedItem.style.backgroundColor = '#f3f3f3';
 			});
 		});

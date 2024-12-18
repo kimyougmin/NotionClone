@@ -16,18 +16,20 @@ export default function PostEditPage({ $target, initialState, route }) {
 		$target: $postEditPage,
 		initialState,
 	});
-    try {
-        route()
-    } catch (e) {
-        console.error(e)
-    }
+
+	// route();
 	this.setState = async ({ documentId, parentId }) => {
 		try {
-			const nextState = await request(`/${documentId}`);
-			const parentState = await request(`/${parentId}`);
 			this.state = { documentId, parentId }; // 상태 업데이트
-			editHeader.setState(parentState);
+
+			const nextState = await request(`/${documentId}`);
 			editBody.setState(nextState);
+
+			// parentId가 존재하면 요청 보내기
+			if (parentId) {
+				const parentState = await request(`/${parentId}`);
+				editHeader.setState(parentState);
+			}
 		} catch (error) {
 			console.error('데이터 요청 중 오류 발생:', error);
 		}
@@ -42,8 +44,6 @@ export default function PostEditPage({ $target, initialState, route }) {
 		$postEditPage.addEventListener('click', async (event) => {
 			const saveButton = event.target.closest('.save-btn');
 			if (saveButton) {
-				console.log('저장 버튼 클릭!');
-
 				const title = $postEditPage.querySelector('.document-title').textContent.trim();
 				const content = $postEditPage.querySelector('.document-content').textContent.trim();
 
@@ -55,14 +55,14 @@ export default function PostEditPage({ $target, initialState, route }) {
 				const editedData = { title, content };
 				console.log(editedData);
 
-				// try {
-				// 	await request(`/${this.state.documentId}`, {
-				// 		method: 'PUT',
-				// 		body: JSON.stringify(editedData),
-				// 	});
-				// } catch (error) {
-				// 	console.log(error);
-				// }
+				try {
+					await request(`/${this.state.documentId}`, {
+						method: 'PUT',
+						body: JSON.stringify(editedData),
+					});
+				} catch (error) {
+					console.error('내용이 전송되지 않았습니다.');
+				}
 			}
 		});
 	};
