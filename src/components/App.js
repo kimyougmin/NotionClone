@@ -33,8 +33,8 @@ export default function App({ $target }) {
 		$target,
 		initialState: {
 			documentId: null,
-			title: 'test',
-			content: 'test content',
+			title: '시작 페이지',
+			content: '새로운 문서를 작성해보세요!',
 			document: [],
 		},
 		route: this.route,

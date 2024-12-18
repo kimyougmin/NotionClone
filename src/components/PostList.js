@@ -13,14 +13,15 @@ export default function PostList({ $target, initialState, route }) {
 		this.keyword = newKeyword;
 	};
 
-	this.setState = (nState) => {
-		this.state = nState;
-		this.render();
-	};
-
+	// 본체
 	this.prepend = (items) => {
 		this.initialState = [...items, ...this.initialState];
 		this.setState([...items, ...this.state]);
+	};
+
+	this.setState = (nState) => {
+		this.state = nState;
+		this.render();
 	};
 
 	this.render = () => {
@@ -38,8 +39,15 @@ export default function PostList({ $target, initialState, route }) {
 
 	this.setUrl = (element) => {
 		const temp = element.className.split(' ');
+		const elementName = temp[0];
 		const id = temp[temp.length - 1];
 		history.pushState({ id, state: this.state }, null, id);
+
+		// parentId를 전달해주어야 함함
+		if (elementName === 'top-document-info') {
+			route(id);
+		}
+
 		route();
 	};
 
@@ -113,7 +121,7 @@ export default function PostList({ $target, initialState, route }) {
 				// 클릭한 li의 배경색 변경
 				const clickedItem = event.currentTarget;
 
-				// url에 아이디 추가
+				// 하위 페이지 클릭 시 url에 id 추가
 				this.setUrl(clickedItem);
 
 				clickedItem.style.backgroundColor = '#f3f3f3';
@@ -131,7 +139,7 @@ export default function PostList({ $target, initialState, route }) {
 				const arrowElement = event.target.closest('.top-document-left');
 				arrowElement.classList.toggle('active');
 
-				// 상위 페이지 클릭 시 상위 페이지 정보로 edit 페이지 변경
+				// 상위 페이지 클릭 시 url에 id 추가
 				this.setUrl(parentElement);
 
 				if (subDocument && subDocument.classList.contains('sub-document')) {

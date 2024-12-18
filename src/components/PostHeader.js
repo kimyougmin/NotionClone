@@ -4,7 +4,7 @@ export default function PostHeader({ $target }) {
 	$target.appendChild($postHeader);
 
 	this.render = () => {
-		$postHeader.innerHTML = `<a href="#">
+		$postHeader.innerHTML = `<a href="/">
                 <img src="src/public/notepad_logo.png" alt="로고 이미지" />
                 <h1>Notepad</h1>
              </a>
