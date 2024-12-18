@@ -124,7 +124,7 @@ button {
 }
 .search-box button {
 	position: absolute;
-	top: 1.2rem;
+	top: 1.5rem;
 	right: 2rem;
 	border-radius: 1.5rem;
 }
@@ -144,6 +144,7 @@ button {
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.5rem;
+	width: 300px;
 }
 
 .top-document-left button {
@@ -158,6 +159,11 @@ button {
 .top-document-left h2 {
 	font-size: 2.6rem;
 	font-weight: 700;
+	display: block;
+	width: 270px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .sub-document {
