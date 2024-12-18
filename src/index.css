@@ -83,9 +83,9 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 4rem;
+	padding-bottom: 3rem;
 	border-bottom: 1px solid #c7c7c7;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .logo a {
