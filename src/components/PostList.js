@@ -9,6 +9,10 @@ export default function PostList({ $target, initialState }) {
         this.state = nState;
         this.render();
     }
+    this.prepend = (items) => {
+        this.state = [...items, ...this.state];
+    };
+
     this.render = () => {
         $postsList.innerHTML = `
             <div></div>
