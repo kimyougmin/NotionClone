@@ -1,5 +1,6 @@
-import PostIndexPage from './PostIndexPage.js';
-import PostEditPage from './PostEditPage.js';
+import PostIndexPage from "./PostIndexPage.js";
+import PostEditPage from "./PostEditPage.js";
+import DeletePage from "./DeletePage.js"; // 삭제 페이지 가져오기
 import { request } from "../api/api.js";
 
 export default function App({ $target }) {
@@ -10,7 +11,7 @@ export default function App({ $target }) {
     const postEditPage = new PostEditPage({
         $target,
         initialState: {
-            documentId: null,
+            documentId: 147244, // test
             document: {
                 title: "",
                 content: "",
@@ -42,5 +43,4 @@ export default function App({ $target }) {
     this.route();
 
     // editorRoute((parent) => this.route(parent));
-
 }
