@@ -5,8 +5,8 @@ export default function PostEditBody({ $target, initialState }) {
 
 	this.state = initialState;
 
-	this.setState = (nextState) => {
-		this.state = nextState;
+	this.setState = (nState) => {
+		this.state = nState;
 		this.render();
 	};
 

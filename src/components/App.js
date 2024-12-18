@@ -24,9 +24,8 @@ export default function App({ $target }) {
 	this.render();
 
 	this.route = async (parent) => {
-		// const { pathname } = window.location;
-		// 임시 pathname
-		const pathname = `/147046`;
+		const { pathname } = window.location;
+
 		if (pathname === '/') {
 			// removeDiv(".edit-page");
 			// mainPage.render();
@@ -40,8 +39,7 @@ export default function App({ $target }) {
 		}
 	};
 
-	// test용 부모 아이디
-	this.route(147041);
+	this.route();
 
 	// editorRoute((parent) => this.route(parent));
 }

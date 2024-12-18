@@ -29,25 +29,38 @@ export default function PostEditPage({ $target, initialState }) {
 		}
 	};
 
-	this.getDocumentData = () => {
-		const title = $postEditPage.querySelector('.document-title');
-		const content = $postEditPage.querySelector('.document-content');
-
-		console.log('제목:', title?.value);
-		console.log('내용:', content?.value);
-	};
-
 	this.render = () => {
 		$target.prepend($postEditPage);
+		this.addEvents();
+	};
 
-		// 렌더링 후 버튼 이벤트 리스너 추가
-		const saveButton = $postEditPage.querySelector('.save-btn');
-		if (saveButton) {
-			saveButton.addEventListener('click', () => {
+	this.addEvents = () => {
+		$postEditPage.addEventListener('click', async (event) => {
+			const saveButton = event.target.closest('.save-btn');
+			if (saveButton) {
 				console.log('저장 버튼 클릭!');
-				this.getDocumentData();
-			});
-		}
+
+				const title = $postEditPage.querySelector('.document-title').textContent.trim();
+				const content = $postEditPage.querySelector('.document-content').textContent.trim();
+
+				if (!title || !content) {
+					console.error('문서 제목 또는 내용 요소를 찾을 수 없습니다.');
+					return;
+				}
+
+				const editedData = { title, content };
+				console.log(editedData);
+
+				// try {
+				// 	await request(`/${this.state.documentId}`, {
+				// 		method: 'PUT',
+				// 		body: JSON.stringify(editedData),
+				// 	});
+				// } catch (error) {
+				// 	console.log(error);
+				// }
+			}
+		});
 	};
 
 	this.render();
