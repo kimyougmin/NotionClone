@@ -1,36 +1,48 @@
-export default function PostEditBody( {$target }) {
-    const $editBody = document.createElement("div");
-    $editBody.className = "document-edit";
-    $target.appendChild($editBody);
-    this.render = () => {
-        $editBody.innerHTML =
-            `
-            <blockquote class="document-title" contenteditable="true">새로운 글의 제목입니다.</blockquote>
-            <blockquote class="document-content" contenteditable="true">
-                사바자믜하개 으니어 므사의 아재오초의 튼칼서디요 히지. 뗑인론란지
-                아막커자는, 시아델다, 죄아헶과 안겔났드숙이으어, 으굼조도랸을 델아개는
-                벙토농눺기라. 모오쇼를 디가기는 어비디의 벼흑녀는지 에래베가릠디다
-                납간으로, 시싱시벽을 아툉지본으라 온기앋심에서 처넌을. 거장의 저조훙어
-                같데크틸모만 김오아오가 임셈해참을 온픈쫜갈은 박뤼눕시족혓린을.
-                잔제잔에 암나아헤로다 녀에듀어요 에홉쉿긴랜 오쎡던 댁질샙,
-                라아맘쿌아다 어서아로 기기 퇸거두이어 라자암. 야기를 마열엥헤서브,
-                므본인먁벆센다. 흐야의 잍익숙갸는 뉴르힝의 제시의 귀미오고.
-                사바자믜하개 으니어 므사의 아재오초의 튼칼서디요 히지. 뗑인론란지
-                아막커자는, 시아델다, 죄아헶과 안겔났드숙이으어, 으굼조도랸을 델아개는
-                벙토농눺기라. 모오쇼를 디가기는 어비디의 벼흑녀는지 에래베가릠디다
-                납간으로, 시싱시벽을 아툉지본으라 온기앋심에서 처넌을. 거장의 저조훙어
-                같데크틸모만 김오아오가 임셈해참을 온픈쫜갈은 박뤼눕시족혓린을.
-                잔제잔에 암나아헤로다 녀에듀어요 에홉쉿긴랜 오쎡던 댁질샙,
-                라아맘쿌아다 어서아로 기기 퇸거두이어 라자암. 야기를 마열엥헤서브,
-                닥가젝놔키다 기익뫅즈 또졔가 란라기븁아다 도나 아항진따를,
-                므본인먁벆센다. 흐야의 잍익숙갸는 뉴르힝의 제시의 귀미오고.
-                사바자믜하개 으니어 므사의 아재오초의 튼칼서디요 히지. 뗑인론란지
-                아막커자는, 시아델다, 죄아헶과 안겔났드숙이으어, 으굼조도랸을 델아개는
-                벙토농눺기라.
-            </blockquote>
-            `
-        ;
-    }
+export default function PostEditBody({
+  $target,
+  initialState = {
+    titile: "",
+    content: "",
+  },
+  onEditing,
+}) {
+  const $editor = document.createElement("div");
+  $editor.className = "editor";
+  $target.appendChild($editor);
+  let isinitialize = false;
 
+  this.state = initialState;
+
+  this.setState = (nextState) => {
+    this.state = nextState;
+    $editor.querySelector("[name = title]").value = this.state.title;
+    $editor.querySelector("[name = content]").value = this.state.content;
     this.render();
+  };
+
+  this.render = () => {
+    if (!isinitialize) {
+      $editor.innerHTML = `
+              <input type ="text" name = "title" class="editor-title" placeholder ="제목없음" value = "${this.state.title}"/>
+              <textarea name ="content" class="editor-content" placeholder ="여기에 내용을 입력해 주세요.">${this.state.content}</textarea>
+          `;
+      isinitialize = true;
+    }
+  };
+
+  this.render();
+
+  $editor.addEventListener("keyup", (e) => {
+    const { target } = e;
+    const name = target.getAttribute("name");
+    if (this.state[name] !== undefined) {
+      const nextState = {
+        ...this.state,
+        [name]: target.value,
+      };
+
+      this.setState(nextState);
+      onEditing(this.state);
+    }
+  });
 }
