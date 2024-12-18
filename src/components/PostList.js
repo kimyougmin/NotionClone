@@ -34,6 +34,7 @@ export default function PostList({ $target, initialState }) {
 		const listItems = $postsList.querySelectorAll('.sub-document-item');
 		listItems.forEach((item) => {
 			item.addEventListener('click', (event) => {
+				event.preventDefault();
 				// 모든 li의 배경색 초기화
 				listItems.forEach((li) => {
 					li.style.backgroundColor = 'white';
@@ -41,6 +42,13 @@ export default function PostList({ $target, initialState }) {
 
 				// 클릭한 li의 배경색 변경
 				const clickedItem = event.currentTarget;
+
+				// url에 아이디 추가
+				const temp = clickedItem.className.split(' ');
+				const id = temp[temp.length - 1];
+				console.log(id);
+				history.pushState({ id }, null, id);
+
 				clickedItem.style.backgroundColor = '#f3f3f3';
 			});
 		});
