@@ -2,6 +2,7 @@ import { PostListMiniUl } from './PostListMiniUi.js';
 
 export function PostListUl(state) {
 	const $listContainer = document.createElement('ul');
+	$listContainer.className = 'top-document';
 
 	$listContainer.innerHTML = state
 		.map((e) => {
