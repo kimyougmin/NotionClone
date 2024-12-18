@@ -66,7 +66,6 @@ button {
 #left {
 	width: 48rem;
 	height: 105rem;
-	overflow: scroll;
 	background-color: #fff;
 	border-radius: 2rem;
 	padding: 5rem 4rem;
@@ -84,9 +83,9 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 4rem;
+	padding-bottom: 3rem;
 	border-bottom: 1px solid #c7c7c7;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .logo a {
@@ -127,6 +126,15 @@ button {
 	border-radius: 1.5rem;
 }
 
+.top-document {
+	height: 70rem;
+	overflow: scroll;
+}
+
+.top-document::-webkit-scrollbar {
+	display: none;
+}
+
 .top-document-info {
 	display: flex;
 	justify-content: space-between;
@@ -138,7 +146,6 @@ button {
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.5rem;
-	width: 300px;
 }
 
 .top-document-left button {
@@ -198,7 +205,7 @@ button {
 	gap: 1.5rem;
 }
 .btn-container button {
-	padding: 1.5rem 3rem;
+	padding: 1rem 3rem;
 	display: flex;
 	align-items: center;
 	gap: 1.5rem;
