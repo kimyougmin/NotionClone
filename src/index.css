@@ -173,8 +173,9 @@ button {
 
 	display: block;
 	overflow: hidden;
-	transition: max-height 0.5s ease;
+	transition: all 0.5s ease;
 	max-height: 0px;
+	margin-bottom: 0rem;
 }
 
 .sub-document.open {
@@ -185,9 +186,10 @@ button {
 
 	/* display: block;
 	overflow: hidden; */
-	transition: max-height 0.5s ease;
 	max-height: 300px;
+	margin-bottom: 2rem;
 }
+
 .sub-document-item {
 	margin-bottom: 5px;
 	border-radius: 8px;
@@ -256,4 +258,15 @@ button {
 
 .document-content::-webkit-scrollbar {
 	display: none;
+}
+
+@keyframes slide-in-from-buttom {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
