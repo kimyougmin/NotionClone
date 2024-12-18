@@ -26,5 +26,5 @@ export default function PostIndexPage({ $target }) {
     this.route = () => {
         this.setState();
     }
-    // listRoute(() => fetchDocuments());
+    // listRoute(() => fetchPosts());
 }

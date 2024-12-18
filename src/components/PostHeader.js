@@ -5,9 +5,9 @@ export default function PostHeader({ $target }) {
 
     this.render = () => {
         $postHeader.innerHTML =
-            `<img src="../images/folder.png" />
+            `<img src="../public/notepad_logo.png" />
             <h2>Notepad</h2>
-            <img src="../images/bluePlus.png"/>`
+            <img src="../public/round_plus.png"/>`
         ;
     }
 
