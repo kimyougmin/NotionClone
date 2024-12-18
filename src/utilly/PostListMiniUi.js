@@ -3,7 +3,7 @@ export function PostListMiniUl(documents) {
         `${documents.map((e) => {
             return `
                 <li class="sub-document-item active" >
-                    <a href="#">
+                    <a href=${e.id}>
                         <div class="document-icon">
                             <img src="src/public/document.png" alt="문서 아이콘" />
                         </div>
