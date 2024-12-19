@@ -1,10 +1,12 @@
-# Notepad 프로젝트
-<img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" />
-<a href="https://notepad-rosy.vercel.app/">사이트 바로가기</a>
+# Notepad Project
+<center><a href="https://notepad-rosy.vercel.app/">➡️ 프로젝트 바로가기</a></center> <br /><br />
+<img src="https://github.com/user-attachments/assets/99770d78-c91b-4151-993a-8b002da787a6"  width="800px;"/>
+
 <br><br><br>
 
 ## 🖥️ 프로젝트 개요
-- 이 프로젝트는 주요 기능을 바닐라 js와 hisdtory api를 활용하여 구현한 프로젝트입니다.
+- 기간 : 2024.12.16 ~ 2024.12.19
+- 이 프로젝트는 주요 기능을 바닐라 JS와 hisdtory API를 활용하여 구현한 프로젝트입니다.
 - 문서 생성, 삭제, 편집, 검색, 애니메이션 같은 주요 기능을 구현하면서 SPA의 기본 구조를 설계하는 데 초점을 맞추었습니다.
 <br><br><br>
 
@@ -13,11 +15,11 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" /> <br /><br /></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/a1849338-6012-4536-9719-a6d580e62e11" width="100px;" /><br /><br /></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" /><br /><br /></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/5c7219e5-57eb-4361-bed7-bf6d68bad6e9" width="100px;" /><br /><br /></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/1a210965-2f67-44ce-8f6f-703355dbefc2" width="100px;" /><br /><br /></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" height="130px"/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/a1849338-6012-4536-9719-a6d580e62e11" width="100px;" /></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="130px"/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/5c7219e5-57eb-4361-bed7-bf6d68bad6e9" width="100px;" /></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/1a210965-2f67-44ce-8f6f-703355dbefc2" width="100px;" /></td>
     </tr>
     <center>
     <tr>
@@ -50,9 +52,9 @@
 <img src="https://github.com/user-attachments/assets/b6f70f95-92af-4484-b788-ee632b6b8fbf" width="1100" />
 <br><br><br>
 
-## 기술 스택
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
-
+## 🛠️ 기술 스택
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) 
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 <br><br><br>
