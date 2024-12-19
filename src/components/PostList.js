@@ -1,4 +1,5 @@
-import { PostListUl } from "../utilly/PostListUl.js";
+import { request } from '../api/api.js';
+import { PostListUl } from '../utilly/PostListUl.js';
 
 export default function PostList({ $target, initialState, route }) {
 	const $postsList = document.createElement('div');
@@ -23,8 +24,9 @@ export default function PostList({ $target, initialState, route }) {
 		this.render();
 	};
 
-  this.render = () => {
-    $postsList.innerHTML = `
+	this.render = () => {
+
+		$postsList.innerHTML = `
             <form class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
                 <button id="button" type="submit">
@@ -142,11 +144,75 @@ export default function PostList({ $target, initialState, route }) {
 				this.setUrl(parentElement);
 
 				if (subDocument && subDocument.classList.contains('sub-document')) {
-					const isHidden = subDocument.style.display === 'none';
-					subDocument.style.display = isHidden ? 'block' : 'none';
+					// const isHidden = subDocument.style.maxHeight === "300px";
+					// subDocument.style.maxHeight = isHidden ? "300px" : "0";
+					subDocument.classList.contains('open')
+						? subDocument.classList.remove('open')
+						: subDocument.classList.add('open');
 				}
 			});
 		});
+
+		// 각각의 동작을 처리할 함수 정의
+		// 문서가 두개씩 생성되는 오류 해결 필요
+		const handleAddEvent = async (parentElement) => {
+			const temp = parentElement.className.split(' ');
+			const id = temp[temp.length - 1];
+
+			const newData = {
+				title: '제목을 입력해주세요.',
+				content: '내용을 입력해주세요.',
+				parent: id,
+			};
+
+			try {
+				const response = await request(`/`, {
+					method: 'POST',
+					body: JSON.stringify(newData),
+				});
+				console.log(response);
+				location.href = '/';
+			} catch (error) {
+				console.error('문서를 추가하는데 실패하였습니다.');
+			}
+		};
+
+		const handleDeleteEvent = async (parentElement) => {
+			const temp = parentElement.className.split(' ');
+			const id = temp[temp.length - 1];
+
+			try {
+				const response = await request(`/${id}`, {
+					method: 'DELETE',
+				});
+				console.log(response);
+				alert('문서가 삭제되었습니다.');
+				location.href = '/';
+			} catch (error) {
+				console.error('문서를 삭제하는데 실패하였습니다.');
+			}
+		};
+
+		// 통합된 이벤트 핸들러
+		if (!$postsList.dataset.eventsBound) {
+			$postsList.dataset.eventsBound = true; // 이벤트가 이미 바인딩되었음을 표시
+			$postsList.addEventListener('click', async (event) => {
+				event.stopPropagation(); // 이벤트 전파 중단
+				const addBtn = event.target.closest('.top-document-add-btn');
+				const deleteBtn = event.target.closest('.top-document-delete-btn');
+				const parentElement = event.target.closest('.top-document-info');
+
+				if (!parentElement) return; // 클릭된 요소에 부모 정보가 없을 경우 종료
+
+				if (addBtn) {
+					// console.log('추가');
+					await handleAddEvent(parentElement);
+				} else if (deleteBtn) {
+					// console.log('삭제');
+					await handleDeleteEvent(parentElement);
+				}
+			});
+		}
 	};
-  this.render();
+	this.render();
 }
