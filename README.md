@@ -27,16 +27,19 @@
 <br><br><br>
 
 ## ⚙️ 주요 기능
-<img src="https://github.com/user-attachments/assets/b6f70f95-92af-4484-b788-ee632b6b8fbf"  />
-
-
-- 문서 추가, 삭제, 편집 기능
+- 상위 및 하위 문서 추가, 저장, 삭제, 편집 기능
 - 모달, 애니메이션 기능
+<img src="https://github.com/user-attachments/assets/b667746a-67b8-4247-b9d7-517b223f0491"  />
+<br>
 - 검색 기능
+<img src="https://github.com/user-attachments/assets/b6f70f95-92af-4484-b788-ee632b6b8fbf" width="800" />
 <br><br><br>
 
 ## 기술 스택
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
 
+![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) 
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 <br><br><br>
 
 ## 📁 폴더 구조
