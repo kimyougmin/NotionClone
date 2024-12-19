@@ -27,6 +27,9 @@
 <br><br><br>
 
 ## ⚙️ 주요 기능
+<img src="https://github.com/user-attachments/assets/b6f70f95-92af-4484-b788-ee632b6b8fbf"  />
+
+
 - 문서 추가, 삭제, 편집 기능
 - 모달, 애니메이션 기능
 - 검색 기능
