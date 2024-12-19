@@ -171,7 +171,7 @@ export default function PostList({ $target, initialState, route }) {
 					body: JSON.stringify(newData),
 				});
 				console.log(response);
-				// location.href = '/';
+				location.href = '/';
 			} catch (error) {
 				console.error('문서를 추가하는데 실패하였습니다.');
 			}
