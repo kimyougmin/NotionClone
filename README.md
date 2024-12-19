@@ -5,12 +5,17 @@
 - 이 프로젝트는 주요 기능을 바닐라 js와 hisdtory api를 활용하여 구현한 프로젝트입니다. 문서 생성, 삭제, 편집, 검색, 애니메이션 같은 주요 기능을 구현하면서 SPA의 기본 구조를 설계하는 데 초점을 맞추었습니다.
 <br><br><br>
 ## 👥 팀원 소개
-- 김영민(팀장) : 전반적인 프로젝트 관리를 담당했으며, ~~
-- - 김동현 :
-- - 김지우 :
-- - 전성우 :
-- - - 한형주 :
 
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/kimyougmin"><img src="width="100px;" alt=""/><br /><sub><b>김영민(팀장)</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/kdh990315"><img src="" width="100px;" alt=""/><br /><sub><b>김동현</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/erase0250"><img src="" width="100px;" alt=""/><br /><sub><b>김지우</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Castillou"><img src="" width="100px;" alt=""/><br /><sub><b>전성우</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/hhj4569"><img src="" width="100px;" alt=""/><br /><sub><b>한형주</b></sub></a><br /></td>
+  </tbody>
+</table>
 <br><br><br>
 ### 🔧 주요 기능
 
