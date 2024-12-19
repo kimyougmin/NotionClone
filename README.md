@@ -1,4 +1,5 @@
 # Notepad 프로젝트
+<img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" />
 <a href="https://notepad-rosy.vercel.app/">사이트 바로가기</a>
 <br><br><br>
 
