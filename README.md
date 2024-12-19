@@ -11,7 +11,14 @@
 - 문서 생성, 삭제, 편집, 검색, 애니메이션 같은 주요 기능을 구현하면서 SPA의 기본 구조를 설계하는 데 초점을 맞추었습니다.
 <br><br><br>
 
-## 👥 팀원 소개
+## 🎯 프로젝트 목표
+- Vanilla JavaScript만을 활용하여 SPA를 설계하고 구현
+- HISTORY API를 활용한 페이지 전환과 상태 관리 학습
+- JavaScript의 이벤트 리스너의 활용과 비동기 통신에 대한 이해
+- 팀원들과의 원활한 소통을 위한 협업 플렛폼 활용 
+<br><br><br>
+
+## 👥 팀원 소개 및 역할
 <center>
 <table>
   <tbody>
@@ -19,28 +26,27 @@
       <td align="center"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" height="130px"/></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/a1849338-6012-4536-9719-a6d580e62e11" width="100px;" /></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="130px"/></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/484ced0b-41fc-4151-93e3-09de551d40b1" width="100px;" /></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/ab0ee5c4-6a7f-4c4e-ac47-4d523a6bca66" width="100px;" /></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/1a210965-2f67-44ce-8f6f-703355dbefc2" width="100px;" /></td>
     </tr>
     <center>
     <tr>
-      <td><a href="https://github.com/kimyougmin">김영민 (팀장)</a></td>
+      <td><a href="https://github.com/kimyougmin">김영민</a></td>
       <td><a href="https://github.com/kdh990315">김동현</a></td>
       <td><a href="https://github.com/erase0250">김지우</a></td>
       <td><a href="https://github.com/Castillou">전성우</a></td>
       <td><a href="https://github.com/hhj4569">한형주</a></td>
     </tr>
-     
+      <tr>
+      <td><a>· 팀 리드 및 협업 관리<br>· 문서 불러오기 및 출력 기능</a></td>
+      <td><a>· 키워드 검색 기능</a></td>
+      <td><a>· 글 수정 기능<br>· 토스트 모달 구현</a></td>
+      <td><a>· 글 삭제 기능</a></td>
+      <td><a>· 새로운 글 추가 기능</a></td>
+    </tr>
   </tbody>
 </table>
 </center>
-<br><br><br>
-
-## 🎯 프로젝트 목표
-- Vanilla JavaScript만을 활용하여 SPA를 설계하고 구현
-- HISTORY API를 활용한 페이지 전환과 상태 관리 학습
-- JavaScript의 이벤트 리스너의 활용과 비동기 통신에 대한 이해
-- 팀원들과의 원활한 소통을 위한 협업 플렛폼 활용 
 <br><br><br>
 
 ## ⚙️ 주요 기능
@@ -54,10 +60,9 @@
 <br><br><br>
 
 ## 🛠️ 기술 스택
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
-![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) 
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
+<img src="https://img.shields.io/badge/Vercel-%23000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+ <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/> ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 <br><br><br>
 
 ## 📁 폴더 구조
