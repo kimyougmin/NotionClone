@@ -25,6 +25,7 @@ export default function PostList({ $target, initialState, route }) {
 	};
 
 	this.render = () => {
+
 		$postsList.innerHTML = `
             <form class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
@@ -170,7 +171,7 @@ export default function PostList({ $target, initialState, route }) {
 					body: JSON.stringify(newData),
 				});
 				console.log(response);
-				location.href = '/';
+				// location.href = '/';
 			} catch (error) {
 				console.error('문서를 추가하는데 실패하였습니다.');
 			}
