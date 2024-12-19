@@ -9,7 +9,7 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/kimyougmin"><img src="width="100px;" alt=""/><br /><sub><b>김영민(팀장)</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/kimyougmin"><img src="https://github.com/user-attachments/assets/f897139a-08e2-4841-a871-d1009afe4239" width="100px;" alt=""/><br /><sub><b>김영민(팀장)</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/kdh990315"><img src="" width="100px;" alt=""/><br /><sub><b>김동현</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/erase0250"><img src="" width="100px;" alt=""/><br /><sub><b>김지우</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/Castillou"><img src="" width="100px;" alt=""/><br /><sub><b>전성우</b></sub></a><br /></td>
@@ -27,19 +27,13 @@
 
 ## ⚙️ 주요 기능
 
-- 포켓몬 리스트를 출력할 때 많은 양의 비동기 통신을 해야함으로 Promise.all() 메서드를 활용하여 프로미스를 병렬로 처리하였습니다. 또한, 더보기 버튼을 클릭하였을때 useRef 훅을 사용하여 pages를 관리해 포켓몬 리스트를 예측 가능하고 일관성 있게 만들었습니다.
-  
-  <img width=500px src="https://github.com/kdh990315/pokemon-react/assets/104114383/539afcaf-b81c-4c11-a629-88011da2e4dc" alt="포켓몬리스트">
+
 
   <br>
   <br>
   <br>
 
-|제목|내용|설명|
-|------|---|---|
-|테스트1|테스트2|테스트3|
-|테스트1|테스트2|테스트3|
-|테스트1|테스트2|테스트3|
+
 
 - UseParams훅을 사용해 URL의 동적인 부분을 추출하여 해당 id에 맞는 포켓몬 데이터를 가져왔습니다. 이때, 컴포넌트가 렌더링되기 전 데이터를 미리 가져올 수 있는 react-router-dom의 loader를 사용하였습니다.
   
