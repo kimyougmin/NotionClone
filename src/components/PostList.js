@@ -193,20 +193,25 @@ export default function PostList({ $target, initialState, route }) {
 		};
 
 		// 통합된 이벤트 핸들러
-		$postsList.addEventListener('click', async (event) => {
-			event.stopPropagation(); // 이벤트 전파 중단
-			const addBtn = event.target.closest('.top-document-add-btn');
-			const deleteBtn = event.target.closest('.top-document-delete-btn');
-			const parentElement = event.target.closest('.top-document-info');
+		if (!$postsList.dataset.eventsBound) {
+			$postsList.dataset.eventsBound = true; // 이벤트가 이미 바인딩되었음을 표시
+			$postsList.addEventListener('click', async (event) => {
+				event.stopPropagation(); // 이벤트 전파 중단
+				const addBtn = event.target.closest('.top-document-add-btn');
+				const deleteBtn = event.target.closest('.top-document-delete-btn');
+				const parentElement = event.target.closest('.top-document-info');
 
-			if (!parentElement) return; // 클릭된 요소에 부모 정보가 없을 경우 종료
+				if (!parentElement) return; // 클릭된 요소에 부모 정보가 없을 경우 종료
 
-			if (addBtn) {
-				await handleAddEvent(parentElement);
-			} else if (deleteBtn) {
-				await handleDeleteEvent(parentElement);
-			}
-		});
+				if (addBtn) {
+					// console.log('추가');
+					await handleAddEvent(parentElement);
+				} else if (deleteBtn) {
+					// console.log('삭제');
+					await handleDeleteEvent(parentElement);
+				}
+			});
+		}
 	};
 	this.render();
 }
