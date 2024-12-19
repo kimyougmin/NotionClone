@@ -12,7 +12,7 @@
   <tbody>
     <tr>
       <td align="center"><a href="https://github.com/kimyougmin"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" alt=""/><br /><sub><b>김영민(팀장)</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/kdh990315"><img src="" width="100px;" alt=""/><br /><sub><b>김동현</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/kdh990315"><img src="https://github.com/user-attachments/assets/a1849338-6012-4536-9719-a6d580e62e11" width="100px;" alt=""/><br /><sub><b>김동현</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/erase0250"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="100px" alt=""/><br /><sub><b>김지우</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/Castillou"><img src="https://github.com/user-attachments/assets/5c7219e5-57eb-4361-bed7-bf6d68bad6e9" width="100px;" alt=""/><br /><sub><b>전성우</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/hhj4569"><img src="https://github.com/user-attachments/assets/1a210965-2f67-44ce-8f6f-703355dbefc2" width="100px;" alt=""/><br /><sub><b>한형주</b></sub></a><br /></td>
@@ -31,9 +31,10 @@
 - 상위 및 하위 문서 추가, 저장, 삭제, 편집 기능
 - 모달, 애니메이션 기능
 <img src="https://github.com/user-attachments/assets/b667746a-67b8-4247-b9d7-517b223f0491"  />
-<br>
+<br><br><br>
+
 - 검색 기능
-<img src="https://github.com/user-attachments/assets/b6f70f95-92af-4484-b788-ee632b6b8fbf" width="800" />
+<img src="https://github.com/user-attachments/assets/b6f70f95-92af-4484-b788-ee632b6b8fbf" width="1100" />
 <br><br><br>
 
 ## 기술 스택
