@@ -24,6 +24,22 @@ export default function PostIndexPage({ $target, route }) {
 	this.render = async () => {
 		await fetchPosts();
 		$target.prepend($postsPage);
+		this.addEvents();
+	};
+
+	this.addEvents = () => {
+		$postsPage.addEventListener('click', async (event) => {
+			const addNewBtn = event.target.closest('.add-new-btn');
+
+			if (addNewBtn) {
+				try {
+					await request(`/`, { method: 'POST' });
+					location.href = '/';
+				} catch (error) {
+					console.error('새로운 문서가 생성되지 않았습니다.');
+				}
+			}
+		});
 	};
 
 	// 사용되지 않는 코드

@@ -11,7 +11,7 @@ export default function PostEditHeader({ $target, initialState }) {
 	};
 
 	this.render = () => {
-		$editHeader.innerHTML = `<h3>${this.state.title}</h3>
+		$editHeader.innerHTML = `<h3>${this.state.title ?? '제목을 입력해주세요.'}</h3>
              <div class="btn-container">
                  <button class="save-btn">
                      <img src="src/public/save.png" alt="저장 이미지" />
@@ -22,6 +22,14 @@ export default function PostEditHeader({ $target, initialState }) {
                     <span>삭제</span>
                 </button>
             </div>
+						<div class="modal save-modal">
+							<span class="circle"></span>
+							<span class="modal-text">저장되었습니다.</span>
+						</div>
+						<div class="modal delete-modal">
+							<span class="circle"></span>
+							<span class="modal-text">삭제되었습니다.</span>
+						</div>
             `;
 	};
 

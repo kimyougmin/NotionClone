@@ -173,8 +173,9 @@ button {
 
 	display: block;
 	overflow: hidden;
-	transition: max-height 0.5s ease;
+	transition: all 0.5s ease;
 	max-height: 0px;
+	margin-bottom: 0rem;
 }
 
 .sub-document.open {
@@ -185,9 +186,10 @@ button {
 
 	/* display: block;
 	overflow: hidden; */
-	transition: max-height 0.5s ease;
 	max-height: 300px;
+	margin-bottom: 2rem;
 }
+
 .sub-document-item {
 	margin-bottom: 5px;
 	border-radius: 8px;
@@ -256,4 +258,61 @@ button {
 
 .document-content::-webkit-scrollbar {
 	display: none;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 95rem;
+	left: calc(50% + 58em);
+	width: 28rem;
+	padding: 1.5rem 2rem;
+	background-color: var(--color-green--sub);
+	border: 3px solid var(--color-green--main);
+	border-radius: 10px;
+	z-index: 1000;
+
+	animation: slide-in-from-buttom 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.modal.save-modal {
+	background-color: var(--color-green--sub);
+	border: 3px solid var(--color-green--main);
+}
+.modal.delete-modal {
+	background-color: var(--color-red--sub);
+	border: 3px solid var(--color-red--main);
+}
+.modal .circle {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: var(--color-green--main);
+
+	margin-right: 1.5rem;
+}
+.modal.save-modal .circle {
+	background-color: var(--color-green--main);
+}
+.modal.delete-modal .circle {
+	background-color: var(--color-red--main);
+}
+.modal .modal-text {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.modal.modal-active {
+	display: block;
+}
+
+@keyframes slide-in-from-buttom {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

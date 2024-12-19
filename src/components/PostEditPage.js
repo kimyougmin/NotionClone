@@ -17,7 +17,6 @@ export default function PostEditPage({ $target, initialState, route }) {
 		initialState,
 	});
 
-	// route();
 	this.setState = async ({ documentId, parentId }) => {
 		try {
 			this.state = { documentId, parentId }; // 상태 업데이트
@@ -42,38 +41,50 @@ export default function PostEditPage({ $target, initialState, route }) {
 
 	this.addEvents = () => {
 		$postEditPage.addEventListener('click', async (event) => {
-			const saveButton = event.target.closest('.save-btn');
-			if (saveButton) {
+			const target = event.target;
+			const saveModal = $postEditPage.querySelector('.save-modal');
+			const deleteModal = $postEditPage.querySelector('.delete-modal');
+
+			if (target.closest('.save-btn')) {
+				// 저장 버튼 클릭 처리
 				const title = $postEditPage.querySelector('.document-title').textContent.trim();
 				const content = $postEditPage.querySelector('.document-content').textContent.trim();
 
 				if (!title || !content) {
-					console.error('문서 제목 또는 내용 요소를 찾을 수 없습니다.');
+					console.error('문서 제목 또는 내용이 비어 있습니다.');
 					return;
 				}
 
 				const editedData = { title, content };
 
-
 				try {
-					await request(`/${this.state.documentId}`, {
+					const response = await request(`/${this.state.documentId}`, {
 						method: 'PUT',
 						body: JSON.stringify(editedData),
 					});
+					if (response) {
+						saveModal.classList.add('modal-active');
+						setTimeout(() => {
+							saveModal.classList.remove('modal-active');
+							location.href = '/';
+						}, 2000);
+					}
 				} catch (error) {
 					console.error('내용이 전송되지 않았습니다.');
 				}
-			}
-		});
-
-		$postEditPage.addEventListener('click', async (event) => {
-			const deleteBtn = event.target.closest('.delete-btn');
-			if (deleteBtn) {
+			} else if (target.closest('.delete-btn')) {
+				// 삭제 버튼 클릭 처리
 				try {
-					await request(`/${this.state.documentId}`, {
+					const response = await request(`/${this.state.documentId}`, {
 						method: 'DELETE',
 					});
-					alert('문서가 삭제되었습니다.');
+					if (response) {
+						deleteModal.classList.add('modal-active');
+						setTimeout(() => {
+							deleteModal.classList.remove('modal-active');
+							location.href = '/';
+						}, 2000);
+					}
 				} catch (error) {
 					console.error('문서를 삭제하는데 실패하였습니다.');
 				}
