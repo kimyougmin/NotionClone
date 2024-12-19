@@ -25,6 +25,7 @@ export default function PostList({ $target, initialState, route }) {
 	};
 
 	this.render = () => {
+
 		$postsList.innerHTML = `
             <form class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
