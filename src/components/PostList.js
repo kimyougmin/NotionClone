@@ -25,7 +25,6 @@ export default function PostList({ $target, initialState, route }) {
 	};
 
 	this.render = () => {
-
 		$postsList.innerHTML = `
             <form class="search-box">
                 <input type="text" id="input" value="${this.keyword}"/>
@@ -130,7 +129,7 @@ export default function PostList({ $target, initialState, route }) {
 		});
 
 		// 토글 버튼 이벤트
-		const toggleButtons = $postsList.querySelectorAll('.top-document-left button');
+		const toggleButtons = $postsList.querySelectorAll('.top-document-left');
 		toggleButtons.forEach((button) => {
 			button.addEventListener('click', (event) => {
 				const parentElement = event.target.closest('.top-document-info');
