@@ -13,7 +13,7 @@
       <td align="center"><a href="https://github.com/kimyougmin"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" alt=""/><br /><sub><b>김영민(팀장)</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/kdh990315"><img src="" width="100px;" alt=""/><br /><sub><b>김동현</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/erase0250"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="100px" alt=""/><br /><sub><b>김지우</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/Castillou"><img src="" width="100px;" alt=""/><br /><sub><b>전성우</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Castillou"><img src="https://github.com/user-attachments/assets/5c7219e5-57eb-4361-bed7-bf6d68bad6e9" width="100px;" alt=""/><br /><sub><b>전성우</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/hhj4569"><img src="" width="100px;" alt=""/><br /><sub><b>한형주</b></sub></a><br /></td>
   </tbody>
 </table>
