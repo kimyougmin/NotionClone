@@ -25,16 +25,16 @@
     <tr>
       <td align="center"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" height="130px"/></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/a1849338-6012-4536-9719-a6d580e62e11" width="100px;" /></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="130px"/></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/ab0ee5c4-6a7f-4c4e-ac47-4d523a6bca66" width="100px;" /></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="130px"/></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/1a210965-2f67-44ce-8f6f-703355dbefc2" width="100px;" /></td>
     </tr>
     <center>
     <tr>
       <td><a href="https://github.com/kimyougmin">김영민</a></td>
       <td><a href="https://github.com/kdh990315">김동현</a></td>
-      <td><a href="https://github.com/erase0250">김지우</a></td>
       <td><a href="https://github.com/Castillou">전성우</a></td>
+      <td><a href="https://github.com/erase0250">김지우</a></td>
       <td><a href="https://github.com/hhj4569">한형주</a></td>
     </tr>
       <tr>
